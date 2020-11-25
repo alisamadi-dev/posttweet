@@ -1,16 +1,12 @@
-
-{% extends 'base.html' %}
-
-{% block content %}
-
+{% extends 'base.html' %} {% block content %}
 
 <h2>HomePage</h2>
 <p>hello i am here from template !</p>
 
 <ul>
-{% for tweet in all_tweets %}
-    <li>{{tweet}}</li>
-{%endfor%}
+  {% for tweet in all_tweets %}
+  <h2><a href="">{{ tweet.tweetTitle}}</a></h2>
+  <p>{{tweet.body}}</p>
+  {%endfor%}
 </ul>
 {% endblock content %}
-
