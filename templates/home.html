@@ -5,7 +5,9 @@
 
 <ul>
   {% for tweet in all_tweets %}
-  <h2><a href="">{{ tweet.tweetTitle}}</a></h2>
+  <h2>
+    <a href="{% url 'tweet_detail' tweet.pk %}">{{ tweet.tweetTitle}}</a>
+  </h2>
   <p>{{tweet.body}}</p>
   {%endfor%}
 </ul>

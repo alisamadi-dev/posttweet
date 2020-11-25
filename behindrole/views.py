@@ -1,5 +1,5 @@
 from .models import Tweet
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 # from django.http import HttpResponse
 # Create your views here.
@@ -12,11 +12,17 @@ from django.views.generic import TemplateView
 #     template_name = 'home.html'
 
 
-class AboutPageView(TemplateView):
-    template_name = 'about.html'
-
-
 class HomePageView(ListView):
     model = Tweet
     template_name = 'home.html'
     context_object_name = 'all_tweets'
+
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'
+
+
+class TweetPageView(DetailView):
+    model = Tweet
+    template_name = 'tweet.html'
+    context_object_name = 'tweet_obj'
