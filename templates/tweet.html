@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% block content %}
+<div class="post-entry">
+  <h2>{{ tweet_obj.tweetTitle}}</h2>
+  <p>{{tweet_obj.body}}</p>
+</div>
 
-<h2>{{ tweet_obj.tweetTitle}}</h2>
-<p>{{tweet_obj.body}}</p>
+<a href="{% url 'tweet_edit' tweet.pk %}">Edit Tweet</a>
 {% endblock content %}

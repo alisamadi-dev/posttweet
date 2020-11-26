@@ -50,3 +50,7 @@ header h1 a {
 h2 {
   margin-top: 20px;
 }
+
+textarea {
+  width: fit-content;
+}

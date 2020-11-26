@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="" method="post">
+  <div class="form-group">
+    <!-- csrf_token Django provides to protect our form from cross-site scripting attacks.” -->
+    {% csrf_token %} {{form.as_p}}
+    <input class="form-control" type="submit" value="Save" />
+  </div>
+</form>
+
+{% endblock content %}
